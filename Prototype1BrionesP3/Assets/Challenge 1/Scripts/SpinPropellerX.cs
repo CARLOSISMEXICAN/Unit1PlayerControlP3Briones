@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Propeller : MonoBehaviour
+public class SpinPropellerX : MonoBehaviour
 {
-    
+    private float propellorSpeed = 1000;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +15,6 @@ public class Propeller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Get the user's vertical input
-
+        transform.Rotate(Vector3.forward, propellorSpeed * Time.deltaTime);
     }
 }
